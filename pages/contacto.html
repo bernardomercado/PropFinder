@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrá tu casa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <main class="contacto">
+        <a href="../index.html">Volver</a>
+        <form class="formulario">
+            <div class="titulo">
+                <h2>C<span>ONTACTO</span></h2>
+            </div>
+            <label>
+                Nombre:
+                <input type="text" name="nombre" placeholder="Escriba su nombre" required>
+            </label>
+            <label>
+                Apellido:
+                <input type="text" name="apellido" placeholder="Escriba su apellido" required>
+            </label>
+            <label>
+                E-mail:
+                <input type="email" name="email" placeholder="Escriba su email" required>
+            </label>
+            <label>
+                Mensaje:
+                <textarea name="mensaje" placeholder="Escriba un mensaje"></textarea>
+            </label>
+            <input type="submit" class="boton" value="Enviar consulta">
+        </form>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+</body>
+</html>
