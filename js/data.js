@@ -187,7 +187,7 @@ const propiedades = {
         ambientes: '3',
         precio: '600',
         barrio: 'Recoleta',
-        image: '/img/arquitectura-moderna-apartamentos.jpg',
+        image: 'img/arquitectura-moderna-apartamentos.jpg',
     },
     {
         propiedadNombre: 'Departamento en Recoleta',
