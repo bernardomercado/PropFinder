@@ -129,3 +129,33 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
+
+// NAVEGADOR
+const hamburguer = document.querySelector('.menu__hamburguer');
+const nav = document.querySelector('.nav');
+const body = document.querySelector('body');
+
+// Agregar un evento de clic al icono de menú hamburguesa
+hamburguer.addEventListener('click', () => {
+  // Alternar la clase CSS 'menu__links--show' en la lista de enlaces del menú
+  nav.classList.toggle('nav--show');
+});
+
+// Agregar un evento de clic al elemento body
+body.addEventListener('click', (event) => {
+  const isClickInside = hamburguer.contains(event.target) || nav.contains(event.target);
+  if (!isClickInside) {
+    nav.classList.remove('nav--show');
+  }
+});
+
+// Obtener todos los enlaces dentro del menú
+const navItems = nav.querySelectorAll('a');
+
+// Agregar un evento de clic a cada enlace dentro del menú
+navItems.forEach(link => {
+  link.addEventListener('click', () => {
+    // Remover la clase CSS 'menu__links--show' de la lista de enlaces del menú para cerrar el menú
+    nav.classList.remove('nav--show');
+  });
+});

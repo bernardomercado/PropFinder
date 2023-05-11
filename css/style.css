@@ -57,6 +57,31 @@ body{
     color: #8C464C;
 }
 
+.nav--show {
+    transform: unset;
+    width: 100%;
+}
+
+.menu__hamburguer{
+    height: 100%;
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu__img{
+    display: block;
+    padding: 0 10px;
+    font-size: 26px;
+    color: #fff;
+}
+
+.menu__img:hover{
+    border: 3px solid #fff;
+    padding: 7px;
+    border-radius: 5px;
+}
+
 .encabezado{
     width: 100%;
     height: 100vh;
@@ -113,14 +138,22 @@ body{
 }
 
 /* CARRUSEL */
+.propiedades__destacadas{
+    text-align: center;
+    padding-top: 40px;
+    text-decoration: underline;
+}
+
 .carrusel{
-    background-color: #a7a5a5;
+    background-color: #b0b6ba;
+
+
 }
 
 .slide-container{
     max-width: 1070px;
     width: 100%;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
 }
 
 .slide-content{
@@ -148,8 +181,17 @@ body{
 }
 
 /* BUSCADOR */
-.contenedor{
+.buscar__casas{
     background-color: #8C464C;
+}
+
+.buscar__casas__texto{
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 40px;
+}
+
+.contenedor{
     padding: 20px;
 }
 
@@ -354,3 +396,29 @@ label.error {
     }
 }
 
+@media(max-width: 650px){
+    .menu__hamburguer{
+        display: flex;
+    }
+    .nav{
+        display: none;
+    }
+    .nav--show{
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        top: 66px;
+        bottom: 0;
+        right: 0;
+        background-color: #49728C;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+    }
+
+    .nav__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+}

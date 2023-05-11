@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -17,6 +18,9 @@
     <nav class="navegador">
         <div class="navegador__logo">
             <a href="#"><h1>FindProp</h1></a>
+        </div>
+        <div class="menu__hamburguer">
+            <i class="menu__img fa-solid fa-bars"></i>
         </div>
         <ul class="nav">
             <li class="nav__link"><a href="#">Buscar</a></li>
@@ -34,7 +38,7 @@
 
     <main>
         <section class="carrusel">
-            <h2>Propiedades destacadas</h2>
+            <h2 class="propiedades__destacadas">Propiedades destacadas</h2>
             <div class="slide-container swiper">
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper">
@@ -113,70 +117,73 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <div class="contenedor">
-            <form class="buscador" id="formulario-busqueda">
-                <div class="buscador__tipo">
-                    <label>Tipo de transacción:</label>
-                    <select name="tipoTransaccion">
+        <section class="buscar__casas">
+            <h2 class="buscar__casas__texto">Encontrá tu casa</h2>
+            <div class="contenedor">
+                <form class="buscador" id="formulario-busqueda">
+                    <div class="buscador__tipo">
+                        <label>Tipo de transacción:</label>
+                        <select name="tipoTransaccion">
+                            <option value="">Seleccione...</option>
+                            <option value="Alquiler">Alquiler</option>
+                            <option value="Venta">Venta</option>
+                        </select>
+                    </div>
+                    <div class="buscador__tipo">
+                        <label>Tipo de propiedad:</label>
+                        <select name="tipoPropiedad">
+                            <option value="">Seleccione...</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Departamento">Departamento</option>
+                        </select>
+                    </div>
+                    <div class="buscador__tipo">
+                        <label for="ambientes">Ambientes:</label>
+                        <select name="ambientes">
+                            <option value="">Seleccione...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="buscador__tipo">
+                        <label for="precio-minimo">Precio mínimo (en dólares):</label>
+                        <select name="precioMinimo">
+                            <option value="">Seleccione...</option>
+                            <option value="100">100 usd</option>
+                            <option value="1000">1.000 usd</option>
+                            <option value="10000">10.000 usd</option>
+                            <option value="100000">100.000 usd</option>
+                            <option value="1000000">1.000.000 usd</option>
+                        </select>
+                    </div>
+                    <div class="buscador__tipo">
+                        <label for="precio-maximo">Precio máximo (en dólares):</label>
+                        <select name="precioMaximo">
+                            <option value="">Seleccione...</option>
+                            <option value="100">100 usd</option>
+                            <option value="1000">1.000 usd</option>
+                            <option value="10000">10.000 usd</option>
+                            <option value="100000">100.000 usd</option>
+                            <option value="+1000000">+ 1.000.000 usd</option>
+                        </select>
+                    </div>
+                    <div class="buscador__tipo">
+                        <label for="barrio">Elije el barrio:</label>
+                        <select name="barrio">
                         <option value="">Seleccione...</option>
-                        <option value="Alquiler">Alquiler</option>
-                        <option value="Venta">Venta</option>
-                    </select>
-                </div>
-                <div class="buscador__tipo">
-                    <label>Tipo de propiedad:</label>
-                    <select name="tipoPropiedad">
-                        <option value="">Seleccione...</option>
-                        <option value="Casa">Casa</option>
-                        <option value="Departamento">Departamento</option>
-                    </select>
-                </div>
-                <div class="buscador__tipo">
-                    <label for="ambientes">Ambientes:</label>
-                    <select name="ambientes">
-                        <option value="">Seleccione...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-                <div class="buscador__tipo">
-                    <label for="precio-minimo">Precio mínimo (en dólares):</label>
-                    <select name="precioMinimo">
-                        <option value="">Seleccione...</option>
-                        <option value="100">100 usd</option>
-                        <option value="1000">1.000 usd</option>
-                        <option value="10000">10.000 usd</option>
-                        <option value="100000">100.000 usd</option>
-                        <option value="1000000">1.000.000 usd</option>
-                    </select>
-                </div>
-                <div class="buscador__tipo">
-                    <label for="precio-maximo">Precio máximo (en dólares):</label>
-                    <select name="precioMaximo">
-                        <option value="">Seleccione...</option>
-                        <option value="100">100 usd</option>
-                        <option value="1000">1.000 usd</option>
-                        <option value="10000">10.000 usd</option>
-                        <option value="100000">100.000 usd</option>
-                        <option value="+1000000">+ 1.000.000 usd</option>
-                    </select>
-                </div>
-                <div class="buscador__tipo">
-                    <label for="barrio">Elije el barrio:</label>
-                    <select name="barrio">
-                      <option value="">Seleccione...</option>
-                      <option value="Belgrano">Belgrano</option>
-                      <option value="Caballito">Caballito</option>
-                      <option value="Palermo">Palermo</option>
-                      <option value="Recoleta">Recoleta</option>
-                      <option value="VillaUrquiza">Villa Urquiza</option>
-                    </select>
-                </div>
-                <button class="buscador__btn" type="submit">Buscar</button>      
-            </form>
-        </div>
+                        <option value="Belgrano">Belgrano</option>
+                        <option value="Caballito">Caballito</option>
+                        <option value="Palermo">Palermo</option>
+                        <option value="Recoleta">Recoleta</option>
+                        <option value="VillaUrquiza">Villa Urquiza</option>
+                        </select>
+                    </div>
+                    <button class="buscador__btn" type="submit">Buscar</button>      
+                </form>
+            </div>
+        </section>
 
         <div id="propiedades"></div>
 
