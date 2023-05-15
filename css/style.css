@@ -386,6 +386,39 @@ label.error {
     color: red;
 }
 
+.footer{
+    background-color:#b0b6ba;
+    padding: 20px;
+}
+
+.footer__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container__links{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__container__links li{
+    margin-right: 20px;
+}
+
+.footer__container__links a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer__container__links a:hover{
+    color:#49728C;
+}
+
 /* Adaptación para computadoras */
 @media (min-width: 950px){
     .encabezado__texto__titulo{
